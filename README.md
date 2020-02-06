@@ -19,11 +19,12 @@ Now that you have the broker and Zookeeper running, you can specify a topic to s
 
 `./kafka-topics.sh --create --topic myTopic -zookeeper \ localhost:2181 --replication-factor 1 --partitions 1`
 
-### Spring-boot project run:
+### import Spring-boot-kafka project:
 `$ mvn clean install`
 `$ mvn spring-boot:run`
 or spring-boot-kafka project import in IDE
 
-Your Java app now has both a Kafka producer and a consumer, so let’s test it all together! Restart your application, and go to `http://localhost:8080/kafka/messages`
+### Run spring-boot-kafka project
+Your Java app now has both a Kafka producer and a consumer, so let’s test it all together! Restart your application, and go to postman or browser and enter URL for cunsumer messages by kafka topic `http://localhost:8080/kafka/messages`
 
-Right now, no information is being returned. The reason is pretty simple: your consumer is configured only to receive new messages and you haven’t sent a new message yet. Let’s fix this problem by going to your web browser and accessing `http://localhost:8080/kafka/produce?message=Message sent by my App!.`
+Right now, no information is being returned. The reason is pretty simple: your consumer is configured only to receive new messages and you haven’t sent a new message yet. Let’s fix this problem by going to your web browser and accessing `http://localhost:8080/kafka/produce?message=Message sent by my App!.` and send message by producer to kafka broker.
