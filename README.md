@@ -20,9 +20,9 @@ Now that you have the broker and Zookeeper running, you can specify a topic to s
 `./kafka-topics.sh --create --topic myTopic -zookeeper \ localhost:2181 --replication-factor 1 --partitions 1`
 
 ### import Spring-boot-kafka project:
-`1. $ mvn clean install`
-`2. $ mvn spring-boot:run`
- 3. Or spring-boot-kafka project import in IDE
+`$ mvn clean install`
+`$ mvn spring-boot:run`
+Or spring-boot-kafka project import in IDE
 
 ### Run spring-boot-kafka project
 Your Java app now has both a Kafka producer and a consumer, so let’s test it all together! Restart your application, and go to postman or browser and enter URL for cunsumer messages by kafka topic `http://localhost:8080/kafka/messages`
